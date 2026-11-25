@@ -3,60 +3,11 @@
 <head>
     <title>Katri College Registration</title>
 
-    <style>
-        body {
-            font-family: Arial;
-            background: #eef4f7;
-            margin: 0;
-            padding: 30px;
-        }
-
-        .container {
-            background: white;
-            max-width: 650px;
-            margin: auto;
-            padding: 25px;
-            border-radius: 10px;
-        }
-
-        h2 {
-            text-align: center;
-            color: #183b56;
-        }
-
-        label {
-            display: block;
-            margin-top: 15px;
-            font-weight: bold;
-        }
-
-        input, select, textarea {
-            width: 100%;
-            padding: 12px;
-            margin-top: 7px;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        button {
-            width: 100%;
-            padding: 13px;
-            margin-top: 20px;
-            background: #246b8f;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        .message {
-            color: green;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">  
 </head>
 
 <body>
+    
 
 <div class="container">
 
@@ -65,7 +16,7 @@
 <h3>Student Registration Form</h3>
 
 
-<form method="POST">
+<form action="register.php" method="POST">
 
 <label>Student Full Name</label>
 <input type="text" name="full_name" required>
@@ -85,10 +36,15 @@
 <input type="email" name="email">
 
 <label>Phone Number</label>
-<input type="tel" name="phone" required>
+<input type="tel" name="phone" minlength="10"  required>
 
 <label>Course / Programme</label>
-<input type="text" name="course" required>
+<select name="study_mode" required>
+    <option value="">Select course</option>
+    <option value="bcs">bcs</option>
+    <option value="it">It</option>
+    <option value="ets">ets</option>
+</select>
 
 <label>Study Mode</label>
 <select name="study_mode" required>
