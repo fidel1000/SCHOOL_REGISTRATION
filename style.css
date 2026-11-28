@@ -38,14 +38,21 @@
             width: 100%;
             padding: 13px;
             margin-top: 20px;
-            background: #246b8f;
+            background: #04ebb5;
             color: white;
             border: none;
-            cursor: pointer;
+            cursor: grab;
         }
 
         .message {
             color: green;
             text-align: center;
         }
-    
+    .image-container {
+        text-align: center;
+        border: 1px solid #ccc;
+        border-radius: 10px;    
+        margin-top: 20px;
+        width: 100%;
+        height: 50%;
+    }
